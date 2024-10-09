@@ -4,7 +4,7 @@ export const TopPage = () => {
     return (
         <div>
             <header>
-                <div className="flex justify-between">
+                <div className="container mx-auto flex justify-between">
                     <p>スケジュール管理</p>
                     <nav>
                         <ul className="flex gap-5">
