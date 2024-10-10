@@ -7,7 +7,7 @@ export const TopPage = () => {
                 <div className="container mx-auto flex justify-between">
                     <p className="logo">スケジュール管理</p>
                     <nav>
-                        <ul className="flex gap-5">
+                        <ul className="flex gap-5 text-emerald-800">
                             <li>利用方法</li>
                             <li>ログイン</li>
                         </ul>
