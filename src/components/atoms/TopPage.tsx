@@ -3,7 +3,7 @@ import React from 'react'
 export const TopPage = () => {
     return (
         <div>
-            <header>
+            <header className="leading-[50px]">
                 <div className="container mx-auto flex justify-between">
                     <p>スケジュール管理</p>
                     <nav>

@@ -626,6 +626,14 @@ video {
   font-weight: 700;
 }
 
+.leading-\[50px\] {
+  line-height: 50px;
+}
+
+.leading-\[1000px\] {
+  line-height: 1000px;
+}
+
 .underline {
   text-decoration-line: underline;
 }
