@@ -14,6 +14,18 @@ export const TopPage = () => {
                     </nav>
                 </div>
             </header>
+            <main>
+                <div>
+                    <p>
+                        スケジュール管理App
+                    </p>
+                </div>
+                <div>
+                    <button>
+                        ログイン
+                    </button>
+                </div>
+            </main>
         </div>
     )
 }
