@@ -4,7 +4,7 @@ type PropsType = {
     children: ReactNode
 }
 
-export const NotLoginLayout = () => {
+export const NotLoginLayout = ({children}:PropsType) => {
   return (
     <div className="relative">
         <header className="bg-white leading-[50px] fixed top-0  left-0 right-0">
