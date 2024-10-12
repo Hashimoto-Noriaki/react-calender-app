@@ -1,3 +1,9 @@
+import { ReactNode } from "react";
+
+type PropsType = {
+    children: ReactNode
+}
+
 export const NotLoginLayout = () => {
   return (
     <div className="relative">
@@ -12,6 +18,9 @@ export const NotLoginLayout = () => {
                 </nav>
             </div>
         </header>
+        <main className="pt-[50px] bg-gradient-to-t from bg-emerald-100 bg-emerald-200 h-screen flex flex-col justify-center items-center">
+            {children}
+        </main>
     </div>
-  )
+    );
 }
