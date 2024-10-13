@@ -4,7 +4,7 @@ export const LoginPage = () => {
     return (
     <div className="w-[500px] bg-white rounded-lg shadow-lg py-10">
         <form className="flex flex-col justify-center items-center gap-10">
-            <h1 className="text-5xl bg-emerald-800 font-bold text-ceneter" >
+            <h1 className="text-5xl text-emerald-800 font-bold text-ceneter" >
                 ログイン
             </h1>
             <div className="w-[80%]">
