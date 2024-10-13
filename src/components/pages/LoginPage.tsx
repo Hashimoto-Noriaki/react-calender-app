@@ -1,7 +1,14 @@
+import { useState } from "react"
 import { Input } from "../atoms/Input"
 import { PrimaryBtn } from "../atoms/PrimaryBtn"
+import { LoginInfoType } from "../../types/login"
 
 export const LoginPage = () => {
+    const [loginInfo, setLoginInfo] = useState<LoginInfoType>({
+        email: "",
+        password: "",
+      })
+    
     return (
     <div className="w-[500px] bg-white rounded-lg shadow-lg py-10">
         <form className="flex flex-col justify-center items-center gap-10">
