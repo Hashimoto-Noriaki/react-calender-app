@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useSetRecoilState } from "recoil";
+import { useNavigate  } from "react-router-dom";
 import { Input } from "../atoms/Input";
 import { PrimaryBtn } from "../atoms/PrimaryBtn";
 import { LoginInfoType } from "../../types/login";
@@ -7,11 +8,12 @@ import { login } from "../../api/login";
 import { loginUserState } from "../../store/loginUserState";
 
 export const LoginPage = () => {
-  const setLoginUser = useSetRecoilState(loginUserState)
-  const [loginInfo, setLoginInfo] = useState<LoginInfoType>({
+    const navigate = useNavigate()
+    const setLoginUser = useSetRecoilState(loginUserState)
+    const [loginInfo, setLoginInfo] = useState<LoginInfoType>({
     email: "",
     password: "",
-  })
+    })
   const [errorMessage, setErrorMessage] = useState("");
 
   const changeLoginInfo = (event: ChangeEvent<HTMLInputElement>) => {
@@ -25,6 +27,7 @@ export const LoginPage = () => {
     try {
       const resUser = login(loginInfo)
       setLoginUser({ id: resUser.id, name: resUser.name })
+      navigate("/calender")
     } catch {
       setErrorMessage("ログインに失敗しました");
     }
