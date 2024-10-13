@@ -3,6 +3,7 @@ import { TopPage} from "./components/pages/TopPage"
 import { LoginPage } from "./components/pages/LoginPage"
 import { NotLoginLayout } from "./components/templates/NotLoginLayout"
 import { CalenderPage } from "./components/pages/CalenderPage"
+import { LoginLayout } from "./components/templates/LoginLayout";
 
 export const router = createBrowserRouter([
     {
@@ -10,9 +11,11 @@ export const router = createBrowserRouter([
         element: <NotLoginLayout/>,
         children:[
             {index: true,element:<TopPage/>},
-            {path: "/login",element:<LoginPage/>},
-            {path: "/calender",element:<CalenderPage/>}
-        ]
-    }
+            {path: "/login",element:<LoginPage/>}
+        ],
+    },
+    {
+        element: <LoginLayout/>,
+        children: [{ path: "/calender",element:<CalenderPage/>}]
+    },
 ])
-
